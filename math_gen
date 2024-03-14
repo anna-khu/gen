@@ -1,0 +1,27 @@
+import random
+some_list = ["Yes", "No"]
+
+recent = 10
+def t_f():
+    print(random.choice(some_list))
+
+def rand_nums(recent):
+    try:
+        num = int(input("How many options do you have? "))
+        recent = num
+    except ValueError:
+        num = recent
+    rand = random.randint(1, num)
+    print(rand)
+    return num
+
+"""while True:
+    user = input("Numbers? ")
+    if user == "yes":
+        rand_nums()
+    else:
+        t_f()"""
+
+
+while True:
+    recent = rand_nums(recent)
